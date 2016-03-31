@@ -5,7 +5,7 @@ var database = {
 
 	// the database url to connect
 	url : 'mongodb://mbenedetto:vimpel1@ec2-54-209-128-66.compute-1.amazonaws.com:27017/dummyDB',
-	postgre: 'postgres://vimpel.cyemgufihio8.us-east-1.rds.amazonaws.com:5432'
+	postgre: 'postgres://mbenedetto:vimpel11@vimpel.cyemgufihio8.us-east-1.rds.amazonaws.com:5432/vimpelcom_data'
 };
 
 
