@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var database = {
 
 	// the database url to connect
-	url : 'mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu'
+	url : 'mongodb://mbenedetto:vimpel1@ec2-54-209-128-66.compute-1.amazonaws.com:27017/dummyDB'
 };
 
 
