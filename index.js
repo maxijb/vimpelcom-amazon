@@ -22,7 +22,26 @@ app.set('view engine', 'jade')
 
 app.get('/', function(req, res){
 		  res.send("MAXI");
-		});
+});
+
+var Cat = mongoose.model('Cat', { name: String });
+
+
+app.get('/mongo', function(req, res){
+
+	console.log('llega');
+	var kitty = new Cat({ name: 'Zildjian' });
+	console.log('guarda');
+	kitty.save(function (err) {
+		console.log('callback', arguments);
+	  if (err) {
+	    res.send("error"+err);
+	  } else {
+	    res.send('meow');
+	  }
+	});
+
+});
 
 
 app.listen(8080, function() {
