@@ -88,9 +88,10 @@ module.exports = function initRoutes(app, pg, mongo) {
 
 function errorResponse(err) {
 	console.error(err);
-	this.send({status: "error", reason: err});
+	this.status(500);
+	this.render("error", {context: this.context, data: err});
 }
 
 function successResponse(data) {
-	this.render(this.context.action, {context: this.context, status: "ok", data: data});
+	this.render(this.context.action, {context: this.context, data: data});
 }
