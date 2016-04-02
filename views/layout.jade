@@ -1,0 +1,23 @@
+doctype
+html
+  head
+    block title
+        title Vimpelcom - Data on AWS
+    link(href="static/css/app.css", type="text/css", rel='stylesheet')
+
+  body
+
+    header
+        h1
+            a(href='/')|Vimpelcom Demo - Data on AWS
+        ul.menu
+            each val in context.options
+                li
+                    a(href='/'+val.name, title=val.description)=val.name
+    
+    section#main
+        block content
+
+    footer
+        span.stack|Built in NodeJS / Jade / AWS
+        strong| by Maximiliano Benedetto

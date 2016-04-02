@@ -1,0 +1,15 @@
+extends ./layout.jade
+
+
+block content
+	h2|Supported operations
+
+	ul.operations
+		each val in context.options
+				li
+					a(href='/'+val.name)
+						span.title=val.name
+						span.description=val.description
+
+
+

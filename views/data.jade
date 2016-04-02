@@ -1,0 +1,23 @@
+extends ./layout.jade
+
+
+block content
+
+		if data
+			p.message|A new record has been created!
+			
+		h2|Storing new data on PostgreSQL
+		form#new-data(method='post', action='/data')
+			p
+				label|First Name
+				input(type="text", name="first_name")
+			p
+				label|Last Name
+				input(type="text", name="last_name")
+			p
+				label|Age
+				input(type="text", name="age")
+			p
+				input(type="submit",value="Submit")
+
+

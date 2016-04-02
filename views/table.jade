@@ -1,0 +1,15 @@
+table.results
+	tr
+		th|ID
+		th|First Name
+		th|Last Name
+		th|Age
+	if data && data.length
+		each val in data
+				tr
+					td.first=val.id
+					td.first=val.first_name
+					td.last=val.last_name
+					td.age=val.age
+	else
+		td.no-data(colspan=4)|Sorry... There's no data to be shown right now... 
