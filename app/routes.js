@@ -30,11 +30,15 @@ module.exports = function initRoutes(app, pg, mongo) {
 		//normalize params		
 		var fname = req.body.first_name || "",
 			lname = req.body.last_name || "",
-			age = !isNaN(req.body.age) ? req.body.age : 0;
+			age = req.body.age && !isNaN(req.body.age) ? req.body.age : 0;
 
-		pg.saveItem(fname, lname, age)
-			.then(successResponse.bind(res, true))
-			.catch(errorResponse.bind(res));
+		if (fname || lname) {
+			pg.saveItem(fname, lname, age)
+				.then(successResponse.bind(res, true))
+				.catch(errorResponse.bind(res));
+		} else {
+			successResponse.call(res);
+		} 
 	});
 
 
