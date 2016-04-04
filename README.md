@@ -21,7 +21,7 @@ $ npm start
 **Architecture**   
 As the task was very specific on architectural tasks (creating LB, databases, etc), but not so much on how the API had to be implemented, I decided to create an html interface to take care of the desired actions.
 This way, it's easier to visualize all the supported operations, and their results.
-
+As the actions were really simple, we didn't really need a frontend behaviour exceding the browser native capabilities, so there's no JS code on the frontend, just static html views. (An example of how I work with a modern framework can be found on the other coding challenge).
 
 **What could be improved**
 - For the sake of simplicity, I printed English texts, where we usually would include variables that could be easily internationalized. 
