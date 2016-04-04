@@ -9,6 +9,8 @@ $ npm install
 $ npm start
 ```
 
+Tipycally, this is all it takes. However, this won't work since, for security reasons, I'm keeping private the URLs to connect to the databases and not pushing the file containing them.
+
 **Tech stack:** 
 - The app is purely backend code, written on NodeJS, levaraging the express framework
 - The static views are rendered with Jade
